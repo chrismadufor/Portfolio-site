@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Lato";
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url(image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+main {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  /* margin-top: -50px; */
+  padding-left: 40px;
+}
+h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 30px;
+  color: #eee;
+  margin-bottom: 10px;
+}
