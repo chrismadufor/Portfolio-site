@@ -4,8 +4,9 @@
   padding: 0;
 }
 body {
-  width: 100%;
+  background-color: black;
   font-family: "Lato";
+  scroll-behavior: smooth;
 }
 main {
   height: 100vh;
@@ -15,14 +16,14 @@ main {
   justify-content: center;
   color: white;
   padding-left: 50px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), black),
     url(image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  background-attachment: fixed;
 }
 .skills {
-  /* height: 100vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -57,12 +58,13 @@ h3 {
 /* Header styles */
 header {
   height: 80px;
-  /* background-color: blue; */
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   padding-left: 50px;
-  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -91,6 +93,23 @@ ul li:hover {
   background-color: transparent;
   color: white;
   font-weight: inherit;
+}
+.name-block,
+.work-one,
+.work-two {
+  animation: name 2s forwards ease-out;
+  margin-left: -100%;
+}
+.work-one{
+  animation-delay: 1s;
+}
+.work-two{
+  animation-delay: 2s;
+}
+@keyframes name {
+  to {
+    margin-left: 0;
+  }
 }
 form {
   width: 100%;
@@ -155,7 +174,7 @@ button {
 }
 .nesrea {
   display: flex;
-  width: 1000px;
+  width: 100%;
   margin: 20px 0;
 }
 .nesrea img {
@@ -177,7 +196,7 @@ button {
   justify-content: center;
 }
 footer {
-  background-color: rgb(31, 17, 17);
+  background-color: rgb(0, 0, 0);
   padding: 20px;
   color: white;
 }
