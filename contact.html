@@ -4,39 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Contact Me | Chris Madufor</title>
   </head>
-  <body>
-    <header>
-      <ul>
+  <body class="contact">
+    <div class="container">
+      <header>
+        <p class="logo-name">Chris Madufor</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="nav-btn"><i class="fas fa-bars"></i></div>
+      </header>
+      <ul class="" id="mobile-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li class="active"><a href="#">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </header>
-    <main>
-      <form action="#">
-        <p>Hi there, I will love to hear from you</p>
-        <input type="text" placeholder="Enter your name" />
-        <input type="email" placeholder="Enter your Email" />
-        <textarea type="text" placeholder="Enter your message"></textarea>
-        <input id="submit" type="submit" value="submit" />
-      </form>
-    </main>
-    <footer>
-      <div class="footer-wrap">
-        <p class="name">Chris Madufor</p>
-        <div class="socials">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+      <main class="contact-wrap">
+        <div class="contact-header">
+          <p>Hi there, I will love to hear from you</p>
         </div>
-      </div>
+        <div class="contact-body">
+          <div class="contact-details">
+            <h3>Reach out to me directly</h3>
+            <div class="contact-info-wrap">
+              <div>
+                <div class="contact-info">
+                  <i class="fas fa-phone-alt phone"></i>
+                  <p>08099194275</p>
+                </div>
+                <div class="contact-info">
+                  <i class="fas fa-envelope mail"></i>
+                  <p>chrismadufor@gmail.com</p>
+                </div>
+                <div class="contact-info">
+                  <i class="fab fa-linkedin linkedin"></i>
+                  <p>Chris Madufor</p>
+                </div>
+              </div>
+              <div>
+                <div class="contact-info">
+                  <i class="fab fa-github github"></i>
+                  <p>chrismadufor</p>
+                </div>
+                <div class="contact-info">
+                  <i class="fab fa-twitter twitter"></i>
+                  <p>chrismadufor</p>
+                </div>
+                <div class="contact-info">
+                  <i class="fab fa-instagram ig"></i>
+                  <p>chrismadufor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form action="#">
+              <h3>Drop a Message</h3>
+              <input type="text" placeholder="Enter your name" />
+              <input type="email" placeholder="Enter your Email" />
+              <textarea
+                type="text"
+                placeholder="Enter your message"
+              ></textarea>
+              <input id="submit" type="submit" value="submit" />
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-wrap">
+          <p class="logo-name">Chris Madufor</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
 
-      <p class="copy">&copy; Chris Madufor 2021</p>
-    </footer>
+        <p class="copy">&copy; Chris Madufor 2021</p>
+      </footer>
+    </div>
+
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -10,54 +10,80 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>My Projects | Chris Madufor</title>
   </head>
-  <body>
+  <body class="projects">
     <header>
+      <p class="logo-name">Chris Madufor</p>
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="active"><a href="#">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div id="nav-btn"><i class="fas fa-bars"></i></div>
     </header>
-    <div class="skills">
-      <h1>My Projects</h1>
-      <h3>My current skillset includes;</h3>
-      <div class="skills-wrap">
-        <button class="html">HTML</button>
-        <button class="css">CSS</button>
-        <button class="js">JavaScript</button>
+    <ul class="" id="mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="projects-wrap">
+      <div class="projects-intro">
+        <h1>Welcome to my Projects</h1>
+        <p>I build responsive websites using HTML, CSS and JavaScript.</p>
+        <p>I am so excited to share my work with you</p>
       </div>
-      <h3>Previous work</h3>
-      <div class="projects">
-        <div class="nesrea">
-          <img src="nes.png" alt="" />
-          <div>
-            <p>
-              This project was built using HTML, CSS and JavaScript. It is my
-              redesign of the official site for the National Environmental
-              Standards Regulation Agency (NESREA).
-            </p>
-            <a href="" class="view">View Site</a>
+      <div class="project-item-wrap">
+        <div class="projects-item">
+          <img src="img/nes.png" alt="">
+          <div class="project-item-details">
+            <p class="project-name">NESREA Site Redesign</p>
+            <button class="project-btn"><a href="https://chrismadufor.github.io/NESREA" target="_blank">View Site</a></button>
           </div>
         </div>
-        <div class="nesrea">
-          <img src="vale.png" alt="" />
-          <div>
-            <p>
-              This project was built using HTML, CSS and JavaScript. It is a
-              landing page for Vale cinemas.
-            </p>
-            <a href="" class="view">View Site</a>
+        <div class="projects-item">
+          <img src="img/space.png" alt="">
+          <div class="project-item-details">
+            <div class="project-name">Spaces Site</div>
+            <button class="project-btn"><a href="https://spacesngapp.herokuapp.com/" target="_blank">View Site</a></button>
+          </div>
+        </div>
+        <div class="projects-item">
+          <img src="img/vale.png" alt="">
+          <div class="project-item-details">
+            <div class="project-name">Vale Cinemas Site</div>
+            <button class="project-btn"><a href="https://chrismadufor.github.io/Vale-Cinemas" target="_blank">View Site</a></button>
+          </div>
+        </div>
+        <div class="projects-item">
+          <img src="img/mactech.png" alt="">
+          <div class="project-item-details">
+            <div class="project-name">Mactech Site</div>
+            <button class="project-btn"><a href="https://chrismadufor.github.io/Mactech" target="_blank">View Site</a></button>
+          </div>
+        </div>
+        <div class="projects-item">
+          <img src="img/proclean.png" alt="">
+          <div class="project-item-details">
+            <div class="project-name">Pro-cleaners Site</div>
+            <button class="project-btn"><a href="https://chrismadufor.github.io/Pro-Cleaners/" target="_blank">View Site</a></button>
+          </div>
+        </div>
+        <div class="projects-item">
+          <img src="img/fintech.png" alt="">
+          <div class="project-item-details">
+            <div class="project-name">Nairabank Site</div>
+            <button class="project-btn"><a href="https://chrismadufor.github.io/Fintech-website" target="_blank">View Site</a></button>
           </div>
         </div>
       </div>
     </div>
     <footer>
       <div class="footer-wrap">
-        <p class="name">Chris Madufor</p>
+        <p class="logo-name">Chris Madufor</p>
         <div class="socials">
           <a href="#"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
@@ -68,5 +94,7 @@
 
       <p class="copy">&copy; Chris Madufor 2021</p>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>

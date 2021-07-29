@@ -4,72 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>About Me | Chris Madufor</title>
   </head>
-  <body>
+  <body class="about">
     <header>
+      <p class="logo-name">Chris Madufor</p>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li class="active"><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
       </ul>
+      <div id="nav-btn"><i class="fas fa-bars"></i></div>
     </header>
-    <main>
-      <h1>About Me</h1>
-      <p class="about">
-        My name is Chris Madufor and I am a web developer. I create responsive
-        websites using HTML, CSS and JS. I am currently a fellow at TIIDELAB
-        where I am learning to improve my technical skills and learn the
-        important non-technical skills as well.
-      </p>
-      <button id="submit"><a href="contact.html">Contact Me</a></button>
-    </main>
-    <div class="gallery">
-      <h2>My TIIDELAB Journey so far</h2>
-      <div class="moments">
-        <div class="img one">
-          <img src="img/f.jpg" alt="one">
-        </div>
-        
-        <div class="img two">
-        <img src="img/a.jpg" alt="two">
-
-        </div>
-        <div class="img three">
-        <img src="img/c.jpg" alt="three">
-
-        </div>
-        <div class="img five">
-        <img src="img/e.jpg" alt="five">
-
-        </div>
-        <div class="img six">
-        <img src="img/b.jpg" alt="six">
-
-        </div>
-        <div class="img seven">
-        <img src="img/e.jpg" alt="five">
-
-        </div>
-        <div class="img eight">
-        <img src="img/a.jpg" alt="six">
-
-        </div>
-        <div class="img nine">
-        <img src="img/e.jpg" alt="five">
-
-        </div>
-        <div class="img ten">
-        <img src="img/f.jpg" alt="six">
-
-        </div>
+    <ul class="" id="mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <main class="about-wrap">
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p class="about">
+          My name is Chris Madufor and I am a web developer. I create responsive
+          websites using HTML, CSS and JS. I am currently a fellow at TIIDELAB
+          where I am learning to improve my technical skills and learn the
+          important non-technical skills as well.
+        </p>
+        <img src="img/img.jpg" alt="" class="img-text">
+        <p>To view my TIIDELab experience so far <button href="gallery.html" class="click-here">Click Here</button></p>
+        <p>
+          I am a graduate of The University of Ibadan. I studied Microbiology.
+        </p>
+        <p>
+          When I am not coding, I either read, listen to music or watch football.
+        </p>
+        <p>To view my resume <button href="gallery.html" class="click-here">Click Here</button> </p>
       </div>
-    </div>
+      <img src="img/image.jpg" alt="" class="outer-img">
+    </main>
     <footer>
       <div class="footer-wrap">
-        <p class="name">Chris Madufor</p>
+        <p class="logo-name">Chris Madufor</p>
         <div class="socials">
           <a href="#"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
@@ -80,5 +66,7 @@
 
       <p class="copy">&copy; Chris Madufor 2021</p>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
