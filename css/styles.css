@@ -114,6 +114,9 @@ header ul li.active:hover a {
   text-transform: uppercase;
   border-top: 1px solid #eee;
 }
+#mobile-nav li a {
+  padding: 20px 100% 20px 0;
+}
 /* END */
 /* ANIMATION FOR NAV BAR ON HOME PAGE */
 .nav li:nth-child(2) {
