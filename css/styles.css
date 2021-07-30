@@ -7,9 +7,11 @@
   padding: 0;
 }
 body {
-  /* background-color: black; */
   font-family: "Lato";
   scroll-behavior: smooth;
+}
+button:hover {
+  transform: scale(0.9);
 }
 .container {
   width: 100%;
@@ -132,6 +134,19 @@ header ul li.active:hover a {
   }
   100% {
     padding-bottom: 10px;
+  }
+}
+/*  ANIMATION FOR HAMBURGER FOR INDEX PAGE ONLY */
+.home #nav-btn {
+  animation: rotate 2s 3 ease-out;
+  animation-delay: 10s;
+}
+@keyframes rotate {
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 /* HOME PAGE STYLES */
@@ -371,6 +386,7 @@ p.name-block {
 
 .contact-wrap {
   margin-top: 80px;
+  /* background-color: #eee; */
 }
 .contact-body h3 {
   font-size: 24px;
@@ -462,17 +478,63 @@ p.name-block {
 .phone {
   color: green;
 }
+.phone-wrap:hover {
+  background-color: green;
+  color: white;
+}
+.phone-wrap:hover .phone {
+  color: white;
+}
 .mail {
   color: red;
 }
+.mail-wrap:hover {
+  background-color: red;
+  color: white;
+}
+.mail-wrap:hover .mail {
+  color: white;
+}
 .linkedin {
-  color: blue;
+  color: rgb(21, 60, 235);
+}
+.linkedin-wrap:hover {
+  background-color: rgb(21, 60, 235);
+  color: white;
+}
+.linkedin-wrap:hover .linkedin {
+  color: white;
+  font-weight: normal;
+}
+.github-wrap:hover {
+  background-color: #333;
+  color: white;
+}
+.github-wrap:hover .github {
+  color: white;
+  font-weight: normal;
 }
 .twitter {
-  color: steelblue;
+  color: rgb(20, 130, 219);
+}
+.twitter-wrap:hover {
+  background-color: rgb(20, 130, 219);
+  color: white;
+}
+.twitter-wrap:hover .twitter {
+  color: white;
+  font-weight: normal;
 }
 .ig {
-  color: rgb(156, 26, 156);
+  color: rgb(201, 18, 201);
+}
+.ig-wrap:hover {
+  background-color: rgb(201, 18, 201);
+  color: white;
+}
+.ig-wrap:hover .ig {
+  color: white;
+  font-weight: normal;
 }
 /* END */
 
