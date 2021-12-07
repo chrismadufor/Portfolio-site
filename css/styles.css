@@ -34,6 +34,8 @@ h3 {
   font-size: 35px;
   margin: 20px 0;
 }
+/* Video background */
+
 /* Header styles */
 header {
   height: 80px;
@@ -41,7 +43,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  background-color: rgba(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   color: white;
   width: 100%;
   position: fixed;
@@ -61,7 +63,7 @@ header ul {
   align-items: center;
 }
 header ul li {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin-right: 30px;
   padding: 10px;
@@ -69,9 +71,9 @@ header ul li {
 }
 header ul li:hover,
 header ul li:focus {
-  background-color: white;
-  border-radius: 5px;
-  color: black;
+  border-bottom:  2px solid white;
+  border-radius: 0px;
+  /* color: black; */
   font-weight: bold;
   cursor: pointer;
 }
@@ -93,18 +95,6 @@ header ul li.active:hover a {
   font-size: 20px;
   color: white;
 }
-#mobile-nav.open {
-  display: block;
-  animation: mobile-nav 1s forwards ease;
-}
-@keyframes mobile-nav {
-  from {
-    top: 0;
-  }
-  to {
-    top: 80px;
-  }
-}
 #mobile-nav {
   width: 100%;
   /* margin-top: 80px; */
@@ -114,7 +104,11 @@ header ul li.active:hover a {
   top: 80px;
   left: 0;
   z-index: 11;
-  display: none;
+  transition: transform 0.5s;
+  transform: translateY(-150%);
+}
+#mobile-nav.open {
+  transform: translateY(0%);
 }
 #mobile-nav li {
   padding: 20px 10%;
@@ -362,6 +356,7 @@ p.name-block {
 }
 .about-text h1 {
   font-size: 50px;
+  font-family: sans-serif;
   text-align: center;
   margin: 20px 0;
 }
@@ -754,7 +749,7 @@ footer .copy {
     top: -10px;
   }
   /* PROJECTS PAGE */
-  .projects header {
+  .projects header , .projects footer{
     background-color: black;
     animation: home 10s infinite ease-out;
   }

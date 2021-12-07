@@ -3,13 +3,14 @@ const mobileNav = document.getElementById('mobile-nav');
 
 
 navBtn.addEventListener('click', () => {
-    document.body.classList.toggle('lock-scroll');
-    mobileNav.classList.toggle ('open')
-    document.querySelector('main').addEventListener('click', () => {
-        if (mobileNav.classList.contains ('open')) {
-            mobileNav.classList.remove ('open')
-            document.body.classList.remove('lock-scroll');
-        }
-    })
+    if (mobileNav.classList.contains ('open')) {
+        mobileNav.classList.remove ('open')
+        document.body.classList.remove('lock-scroll');
+    }
+    else {
+        mobileNav.classList.add('open')
+        document.body.classList.add('lock-scroll')
+    }
 })
+
 
