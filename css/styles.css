@@ -86,6 +86,7 @@ header ul li.active:hover {
   background-color: white;
   cursor: unset;
   border-radius: 5px;
+  border: none;
 }
 header ul li.active:hover a {
   border-radius: 5px;
