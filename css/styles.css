@@ -5,13 +5,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Lato";
 }
 body {
   font-family: "Lato";
   scroll-behavior: smooth;
-}
-button:hover {
-  transform: scale(0.9);
 }
 .container {
   width: 100%;
@@ -71,7 +69,7 @@ header ul li {
 }
 header ul li:hover,
 header ul li:focus {
-  border-bottom:  2px solid white;
+  border-bottom: 2px solid white;
   border-radius: 0px;
   /* color: black; */
   font-weight: bold;
@@ -136,11 +134,14 @@ header ul li.active:hover a {
   animation-delay: 11s;
 }
 @keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
   50% {
-    padding-bottom: 30px;
+    transform: translateY(-20%);
   }
   100% {
-    padding-bottom: 10px;
+    transform: translateY(0);
   }
 }
 /*  ANIMATION FOR HAMBURGER FOR INDEX PAGE ONLY */
@@ -164,10 +165,12 @@ body.home {
 }
 main.home-wrap {
   height: 100vh;
+  min-height: 620px;
   color: white;
+  padding-top: 100px;
   display: flex;
+  flex-direction: column;
   align-content: center;
-  justify-content: center;
   /* position: relative; */
 }
 .home-text {
@@ -176,19 +179,21 @@ main.home-wrap {
   align-content: center;
   justify-content: center;
   z-index: 10;
-  animation: home-text 2s forwards ease-out;
+  /* animation: home-text 2s forwards ease-out; */
+
+  animation: float 2s forwards ease-out;
 }
 .home-text p {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(192, 209, 209);
   letter-spacing: 2px;
   margin: 10px 0;
   font-weight: bold;
 }
 p.name-block {
-  font-size: 40px;
-  margin: 10px 0;
+  font-size: 36px;
+  margin: 10px 0 0;
   color: white;
 }
 @keyframes home {
@@ -205,16 +210,75 @@ p.name-block {
     background-color: black;
   }
 }
-@keyframes home-text {
-  0% {
-    transform: scale(0.5);
-    opacity: 0.3;
+@keyframes float {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
   }
-  100% {
-    transform: scale(1);
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
+main.home-wrap > a > button {
+  width: fit-content;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  border: 1px solid #eee;
+  background-color: transparent;
+  color: white;
+  margin: 30px auto 0;
+  transition: 0.3s ease;
+  animation: float 4s forwards ease-out;
+  cursor: pointer;
+}
+main.home-wrap > a > button i {
+  margin-top: 3px;
+}
+main.home-wrap > a > button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.ml {
+  margin-left: 10px;
+}
+
+.icon-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 20px 10px;
+  justify-content: center;
+  margin-top: 40px;
+  animation: float 3s forwards ease-out;
+  /* display: flex; */
+}
+.icon {
+  background-color: #eee;
+  padding: 10px 5px;
+  border-radius: 5px;
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.icon:hover {
+  transform: translateY(-10px);
+}
+.icon > i {
+  font-size: 60px;
+}
+
+.icon > p {
+  font-size: 14px;
+  text-align: center;
+  margin: 5px 0;
+  color: black;
+  font-weight: 700;
+}
+
 /* SPECKS */
 .speck {
   position: absolute;
@@ -296,41 +360,50 @@ p.name-block {
   color: white;
   margin: 30px auto;
   font-size: 18px;
-  width: 90%;
+  width: 80%;
   text-align: center;
   line-height: 30px;
 }
 .projects-intro h1 {
   font-size: 30px;
 }
+.project-item-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .projects-item {
-  height: 320px;
   width: 85%;
-  max-width: 400px;
-  margin: 10px auto 30px;
+  margin: 20px 0;
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.3);
-  /* box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.3); */
   background-color: #eee;
 }
 .projects-item img {
   width: 100%;
-  height: 200px;
+  /* height: 170px; */
+  object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
 .project-item-details {
-  text-align: center;
+  padding: 10px 20px;
+  /* text-align: center; */
   color: white;
 }
 .project-name {
   text-transform: uppercase;
   font-weight: bold;
   color: rgb(0, 0, 0);
-  margin: 10px 0;
   font-size: 18px;
+  margin: 10px 0;
+}
+.project-name i {
+  font-size: 20px;
+  margin: 0 3px;
+  box-shadow: 2px 2px 5px #70707038;
 }
 .project-btn {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   color: white;
   text-transform: uppercase;
   font-size: 16px;
@@ -607,26 +680,43 @@ footer .copy {
 /*  MEDIA QUERIES */
 @media (min-width: 760px) {
   /* HOME PAGE */
-  home-text p {
-    font-size: 40px;
+  main.home-wrap {
+    justify-content: center;
+    padding: 0;
+  }
+  .home-text p {
+    font-size: 30px;
   }
   p.name-block {
-    font-size: 70px;
+    font-size: 50px;
+  }
+  .icon-wrap {
+    grid-template-columns: repeat(6, 90px);
+    grid-auto-rows: auto;
+  }
+  .icon > i {
+    font-size: 40px;
   }
   /* PROJECTS PAGE */
   .projects-intro h1 {
-    font-size: 50px;
+    font-size: 40px;
+  }
+  .projects-intro {
+    margin: 80px auto;
   }
   .project-item-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   .projects-item {
-    width: 40%;
-    max-width: 400px;
-    margin: 30px;
+    width: 100%;
+    margin: 0;
+  }
+  .projects-item img {
+    height: 200px;
   }
   /* ABOUT PAGE */
   .about header {
@@ -750,18 +840,15 @@ footer .copy {
     top: -10px;
   }
   /* PROJECTS PAGE */
-  .projects header , .projects footer{
+  .projects header,
+  .projects footer {
     background-color: black;
     animation: home 10s infinite ease-out;
   }
   .project-item-wrap {
-    max-width: unset;
-    margin: 0 auto;
-    margin: 20px;
-  }
-  .projects-item {
-    width: 30%;
-    max-width: 300px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    margin: 30px auto;
   }
   /* CONTACT PAGE */
   .contact header {
