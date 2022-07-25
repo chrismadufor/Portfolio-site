@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -16,7 +17,9 @@
   <body class="contact">
     <div class="container">
       <header>
-        <p class="logo-name">Chris Madufor</p>
+        <a href="index.html">
+          <p class="logo-name">Chris Madufor</p>
+        </a>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -40,42 +43,56 @@
             <h3>Reach out to me directly</h3>
             <div class="contact-info-wrap">
               <div>
-                <div class="contact-info phone-wrap">
-                  <i class="fas fa-phone-alt phone"></i>
-                  <p>08099194275</p>
-                </div>
-                <div class="contact-info mail-wrap">
-                  <i class="fas fa-envelope mail"></i>
-                  <p>chrismadufor@gmail.com</p>
-                </div>
-                <div class="contact-info linkedin-wrap">
-                  <i class="fab fa-linkedin linkedin"></i>
-                  <p>Chris Madufor</p>
-                </div>
+                <a href="wa.me/2348099194275">
+                  <div class="contact-info phone-wrap">
+                    <i class="fab fa-whatsapp phone"></i>
+                    <p>08099194275</p>
+                  </div>
+                </a>
+                <a href="mailto:chrismadufor@gmail.com">
+                  <div class="contact-info mail-wrap">
+                    <i class="fas fa-envelope mail"></i>
+                    <p>chrismadufor@gmail.com</p>
+                  </div>
+                </a>
+                <a href="https://www.linkedin.com/in/chris-madufor/">
+                  <div class="contact-info linkedin-wrap">
+                    <i class="fab fa-linkedin linkedin"></i>
+                    <p>Chris Madufor</p>
+                  </div>
+                </a>
               </div>
               <div>
-                <div class="contact-info github-wrap">
-                  <i class="fab fa-github github"></i>
-                  <p>chrismadufor</p>
-                </div>
-                <div class="contact-info twitter-wrap">
-                  <i class="fab fa-twitter twitter"></i>
-                  <p>chrismadufor</p>
-                </div>
-                <div class="contact-info ig-wrap">
+                <a href="https://github.com/chrismadufor">
+                  <div class="contact-info github-wrap">
+                    <i class="fab fa-github github"></i>
+                    <p>chrismadufor</p>
+                  </div>
+                </a>
+                <a href="https://twitter.com/chrismadufor">
+                  <div class="contact-info twitter-wrap">
+                    <i class="fab fa-twitter twitter"></i>
+                    <p>chrismadufor</p>
+                  </div>
+                </a>
+                <!-- <div class="contact-info ig-wrap">
                   <i class="fab fa-instagram ig"></i>
                   <p>chrismadufor</p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
           <div class="contact-form">
-            <form action="#">
+            <form id="form-contact">
               <h3>Drop a Message</h3>
-              <input type="text" placeholder="Enter your name" />
-              <input type="email" placeholder="Enter your Email" />
+              <p class="error-text">Fill all fields*</p>
+              <input type="hidden" name="contact_number">
+              <input type="text" name="full_name" class="name" placeholder="Enter your full name" />
+              <input type="email" name="email" class="email" placeholder="Enter your Email" />
               <textarea
                 type="text"
+                name="message"
+                class="message"
                 placeholder="Enter your message"
               ></textarea>
               <input id="submit" type="submit" value="submit" />
@@ -99,5 +116,6 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>

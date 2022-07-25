@@ -1,11 +1,11 @@
 /* GENERAL STYLES */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&family=Rubik:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Pacifico&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lato";
+  font-family: "Albert Sans";
 }
 body {
   font-family: "Lato";
@@ -13,7 +13,7 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
   position: relative;
 }
@@ -23,6 +23,9 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Merriweather';
 }
 h1 {
   font-size: 70px;
@@ -50,8 +53,9 @@ header {
   z-index: 100;
 }
 .logo-name {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Pacifico", sans-serif !important;
   font-size: 30px;
+  font-weight: normal;
 }
 header ul {
   list-style: none;
@@ -116,6 +120,9 @@ header ul li.active:hover a {
   text-transform: uppercase;
   border-top: 1px solid #eee;
 }
+#mobile-nav li:last-child {
+  border-bottom: 1px solid #eee;
+}
 #mobile-nav li a {
   padding: 20px 100% 20px 0;
 }
@@ -167,10 +174,11 @@ main.home-wrap {
   height: 100vh;
   min-height: 620px;
   color: white;
-  padding-top: 100px;
+  padding: 100px 0 50px;
   display: flex;
   flex-direction: column;
   align-content: center;
+  justify-content: center;
   /* position: relative; */
 }
 .home-text {
@@ -191,10 +199,11 @@ main.home-wrap {
   margin: 10px 0;
   font-weight: bold;
 }
-p.name-block {
+.name-block {
   font-size: 36px;
   margin: 10px 0 0;
   color: white;
+  text-align: center;
 }
 @keyframes home {
   25% {
@@ -247,7 +256,7 @@ main.home-wrap > a > button:hover {
 
 .icon-wrap {
   display: grid;
-  grid-template-columns: repeat(3, 80px);
+  grid-template-columns: repeat(3, 100px);
   gap: 20px 10px;
   justify-content: center;
   margin-top: 40px;
@@ -256,7 +265,7 @@ main.home-wrap > a > button:hover {
 }
 .icon {
   background-color: #eee;
-  padding: 10px 5px;
+  padding: 20px 5px;
   border-radius: 5px;
   transition: transform 0.5s ease;
   display: flex;
@@ -371,6 +380,7 @@ main.home-wrap > a > button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 0 20px;
 }
 .projects-item {
   width: 85%;
@@ -429,8 +439,8 @@ main.home-wrap > a > button:hover {
   max-width: 500px;
 }
 .about-text h1 {
-  font-size: 50px;
-  font-family: sans-serif;
+  font-size: 30px;
+  /* font-family: sans-serif; */
   text-align: center;
   margin: 20px 0;
 }
@@ -465,12 +475,17 @@ main.home-wrap > a > button:hover {
 /* END */
 /* CONTACT PAGE STYLES */
 
+.error-text {
+  font-weight: bold;
+  color: red;
+  display: none;
+}
 .contact-wrap {
   margin-top: 80px;
   /* background-color: #eee; */
 }
 .contact-body h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin: 20px 0;
   text-align: center;
@@ -511,7 +526,7 @@ main.home-wrap > a > button:hover {
   width: 100%;
   margin: 15px 0;
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   border: 1px solid rgba(128, 128, 128, 0.3);
   border-radius: 5px;
@@ -577,10 +592,10 @@ main.home-wrap > a > button:hover {
   color: white;
 }
 .linkedin {
-  color: rgb(21, 60, 235);
+  color: #0A66C2;
 }
 .linkedin-wrap:hover {
-  background-color: rgb(21, 60, 235);
+  background-color: #0A66C2;
   color: white;
 }
 .linkedin-wrap:hover .linkedin {
@@ -687,11 +702,11 @@ footer .copy {
   .home-text p {
     font-size: 30px;
   }
-  p.name-block {
+  .name-block {
     font-size: 50px;
   }
   .icon-wrap {
-    grid-template-columns: repeat(6, 90px);
+    grid-template-columns: repeat(6, 100px);
     grid-auto-rows: auto;
   }
   .icon > i {
@@ -710,6 +725,7 @@ footer .copy {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding: 0 0 50px;
   }
   .projects-item {
     width: 100%;
@@ -739,7 +755,7 @@ footer .copy {
     z-index: 5;
   }
   .about-text h1 {
-    font-size: 70px;
+    font-size: 40px;
   }
   .about-text p {
     font-size: 18px;
@@ -752,7 +768,7 @@ footer .copy {
     display: block;
     width: 100%;
     height: 100%;
-    max-height: 600px;
+    max-height: 700px;
     position: absolute;
     top: 50%;
     left: 0;
@@ -782,7 +798,7 @@ footer .copy {
   }
   .contact-info-wrap {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
   }
   .contact-info {
@@ -873,5 +889,14 @@ footer .copy {
   .moments {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(200px, 300px);
+  }
+}
+
+@media (max-width: 320px) {
+  .icon-wrap {
+    grid-template-columns: repeat(2, 100px);
+  }
+  main.home-wrap {
+    height: unset;
   }
 }
