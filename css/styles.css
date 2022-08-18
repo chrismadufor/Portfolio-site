@@ -516,6 +516,7 @@ main.home-wrap > a > button:hover {
   width: 90%;
   margin: 0 auto;
   display: flex;
+  /* gap: 5%; */
   flex-direction: column;
   padding: 0 0 20px;
   max-width: 450px;
@@ -550,7 +551,7 @@ main.home-wrap > a > button:hover {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  margin: 10px 0;
+  margin: 0 0 16px;
   padding: 0 15px;
   border: 1px solid rgba(128, 128, 128, 0.3);
   box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.3);
@@ -569,6 +570,7 @@ main.home-wrap > a > button:hover {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 0px;
 }
 /* COLORS FOR ICONS */
 .phone {
@@ -792,26 +794,30 @@ footer .copy {
     font-size: 30px;
   }
   .contact-body {
-    max-width: unset;
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
+    flex-direction: row;
+    gap: 5%;
+    padding: 50px 0;
+  }
+  .contact-details, .contact-form {
+    width: 48%;
   }
   .contact-info-wrap {
-    display: flex;
+    /* display: flex; */
     /* align-items: center; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    width: 100%;
   }
   .contact-info {
     height: 70px;
-  }
-  .contact-info-wrap > div {
-    width: 48%;
   }
   .contact-form input {
     height: 70px;
   }
   .contact-form textarea {
-    height: 120px;
+    height: 150px;
   }
   /* GALLERY */
   .gallery {
