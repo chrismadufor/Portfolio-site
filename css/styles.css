@@ -477,7 +477,7 @@ main.home-wrap > a > button:hover {
 .about-text h1 {
   font-size: 30px;
   /* font-family: sans-serif; */
-  text-align: center;
+  /* text-align: center; */
   margin: 20px 0;
 }
 .about-text p {
@@ -748,7 +748,7 @@ footer .copy {
     grid-auto-rows: auto;
   }
   .icon > i {
-    font-size: 40px;
+    font-size: 48px;
   }
   /* PROJECTS PAGE */
   .projects-intro h1 {
